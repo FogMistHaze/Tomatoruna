@@ -7,27 +7,27 @@ public class SETest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetMouseButtonDown(0))
         {
             TinyAudio.PlaySE(TinyAudio.SE.Menu_Select);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetMouseButtonDown(1))
         {
             TinyAudio.PlaySE(TinyAudio.SE.Menu_Startup);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetMouseButtonDown(2))
         {
             TinyAudio.PlaySE(TinyAudio.SE.Decision);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetMouseButtonDown(3))
         {
             TinyAudio.PlaySE(TinyAudio.SE.Cancel);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetMouseButtonDown(4))
         {
             TinyAudio.PlaySE(TinyAudio.SE.TomatoAttack);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
+        if (Input.GetMouseButtonDown(5))
         {
             TinyAudio.PlaySE(TinyAudio.SE.CoinAttack);
         }

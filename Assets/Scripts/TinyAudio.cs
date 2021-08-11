@@ -36,6 +36,6 @@ public class TinyAudio : MonoBehaviour
     /// <param name="se">鳴らしたい効果音</param>
     public static void PlaySE(SE se)
     {
-        Instance.audioSource.PlayOneShot(Instance.selist[(int)se]);
+        Instance.audioSource.PlayOneShot(Instance.seList[(int)se]);
     }
 }
