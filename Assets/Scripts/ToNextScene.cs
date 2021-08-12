@@ -19,4 +19,8 @@ public class ToNextScene : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
+    public void SetChangeFalse()
+    {
+        sceneChanged = false;
+    }
 }
