@@ -1005,6 +1005,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462671399}
   - component: {fileID: 1462671400}
+  - component: {fileID: 1462671401}
   m_Layer: 0
   m_Name: TitleManager
   m_TagString: Untagged
@@ -1038,7 +1039,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26133893ef74cba4f86b6cee2e979478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Tomatoruna/Scenes/Gaame
+  nextScene: Tomatoruna/Scenes/Game
+--- !u!114 &1462671401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462671398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d0f4a108382eb4484c5f802a8a5c30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5283245334685670425
 PrefabInstance:
   m_ObjectHideFlags: 0
