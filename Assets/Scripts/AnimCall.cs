@@ -10,6 +10,6 @@ public class AnimCall : MonoBehaviour
 
     public void Call()
     {
-        Debug.Log("called");
+        Debug.Log("GOcalled");
     }
 }
