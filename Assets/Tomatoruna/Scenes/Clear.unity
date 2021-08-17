@@ -383,6 +383,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8923450334596819724, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a6d72075392f89044862721125993906, type: 3}
+    - target: {fileID: 8923450334596819724, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8923450334596819726, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
       propertyPath: m_Name
@@ -402,6 +412,8 @@ GameObject:
   - component: {fileID: 906335781}
   - component: {fileID: 906335780}
   - component: {fileID: 906335779}
+  - component: {fileID: 906335783}
+  - component: {fileID: 906335782}
   m_Layer: 5
   m_Name: Modoru
   m_TagString: Untagged
@@ -520,6 +532,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 906335777}
   m_CullTransparentMesh: 0
+--- !u!114 &906335782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906335777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5e3002d9d009054db3a44ff765f5f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callEvents:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2045151272}
+        m_MethodName: SetChangeFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!95 &906335783
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906335777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0797f7be31ad04e498d7b3a5f9abd537, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1368557074
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,7 +645,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4162899199
+    rgba: 2149631
   m_fontColor: {r: 1, g: 0.7989434, b: 0.1273585, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -810,8 +867,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2045151271}
-  - component: {fileID: 2045151270}
   - component: {fileID: 2045151272}
+  - component: {fileID: 2045151273}
+  - component: {fileID: 2045151270}
   m_Layer: 0
   m_Name: ClearManager
   m_TagString: Untagged
@@ -828,7 +886,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2045151269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c077ae34fc7eac4e80274ddb8c78bca, type: 3}
+  m_Script: {fileID: 11500000, guid: 18d0f4a108382eb4484c5f802a8a5c30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2045151271
@@ -858,3 +916,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Tomatoruna/Scenes/Title
+--- !u!114 &2045151273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045151269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a16c6141bdf82424a8973534bb8ccb32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgm: 0

@@ -43,15 +43,15 @@ public class TinyAudio : MonoBehaviour
         Instance.audioSource.PlayOneShot(Instance.seList[(int)se]);
     }
 
-    public static void StopBGM()
-    {
-        Instance.audioSource.Stop();
-    }
-
     public static void PlayBGM(BGM bgm)
     {
         StopBGM();
-        Instance.audioSource.clip=Instance.bgmList[(int)bgm];
+        Instance.audioSource.clip = Instance.bgmList[(int)bgm];
         Instance.audioSource.Play();
     }
+
+    public static void StopBGM()
+    {
+        Instance.audioSource.Stop();
+    }   
 }
