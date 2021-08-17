@@ -13,7 +13,9 @@ public class ItemGet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.CompareTag("Player"))
+        GameManager.Instance.AddPoint(100);
+
+        if (collision.collider.CompareTag("Player"))
         {
             Destroy(gameObject);
         }

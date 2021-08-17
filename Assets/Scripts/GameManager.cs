@@ -18,9 +18,12 @@ public class GameManager : MonoBehaviour
     static int score;
     static float time;
     const float StartTime = 10f;
+    const int ScoreMax = 99999;
 
     void Awak()
     {
+        Instance = this;
+
         score = 0;
         time = StartTime;
 
@@ -52,6 +55,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
     }
 
+    public static GameManager Instance { get; private set; }
+
+    public static void AddPoint(int point)
+    {
+        score += point;
+
+        score = Mathf.Min(score, ScoreMax);
+        Instance.UpdateScoreText();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +86,16 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Clear");
         }
 #endif
+    }
 
+    void FixedUpdate()
+    {
+        time -= time.fixedDeltaTime;
+        if(time<=0)
+        {
+            time = 0;
+            ToGameover();
+        }
+        UpdateTimeText;
     }
 }
