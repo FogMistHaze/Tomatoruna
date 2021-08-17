@@ -14,11 +14,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BG
+  - Player
+  - Enemy
+  - RItem
+  - Item
   - 
   - 
   - 
