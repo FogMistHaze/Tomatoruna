@@ -21,7 +21,6 @@ public class ToNextScene : MonoBehaviour
 
     public void SetChangeFalse()
     {
-        TinyAudio.PlaySE(TinyAudio.SE.Gameover);
         sceneChanged = false;
     }
 

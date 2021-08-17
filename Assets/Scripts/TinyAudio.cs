@@ -2,7 +2,7 @@
 public class TinyAudio : MonoBehaviour
 {
     public static TinyAudio Instance;
-   
+
     /// <summary>
     /// seListに設定する効果音の種類を以下に定義します。
     /// </summary>
@@ -11,15 +11,23 @@ public class TinyAudio : MonoBehaviour
         Decision,
         CoinAttack,
         TomatoAttack,
-        Clear,
-        Gameover,
-        AppleAttack
+        AppleAttack,
     }
 
     [Tooltip("効果音のAudio Clipを、SEの列挙子と同じ順番で設定してください。"), SerializeField]
     AudioClip[] seList = null;
     AudioSource audioSource;
-    
+
+    //ゲームクリアとオーバー用
+    public enum BGM
+    {
+        Clear,
+        Gameover
+    }
+
+    [Tooltip("BGM音源"), SerializeField]
+    AudioClip[] bgmList = null;
+
     private void Awake()
     {
         Instance = this;
@@ -33,5 +41,17 @@ public class TinyAudio : MonoBehaviour
     public static void PlaySE(SE se)
     {
         Instance.audioSource.PlayOneShot(Instance.seList[(int)se]);
+    }
+
+    public static void StopBGM()
+    {
+        Instance.audioSource.Stop();
+    }
+
+    public static void PlayBGM(BGM bgm)
+    {
+        StopBGM();
+        Instance.audioSource.clip=Instance.bgmList[(int)bgm];
+        Instance.audioSource.Play();
     }
 }
