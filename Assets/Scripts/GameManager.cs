@@ -7,6 +7,35 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    static bool clear;
+    static bool gameover;
+
+    void Awak()
+    {
+        ItemGet.ClearCount();
+        clear = false;
+        gameover = false;    
+    }
+
+    public static void ToClear()
+    {
+        if (clear || gameover) return;
+
+        clear = true;
+        SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
+        Time.timeScale = 0;
+    }
+
+    public static void ToGameover()
+    {
+        if (clear || gameover) return;
+
+        gameover = true;
+        SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
+        Time.timeScale = 0;
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {

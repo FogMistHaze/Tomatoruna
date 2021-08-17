@@ -5,11 +5,11 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     [SerializeField]
-    float speedmin = 1f;
+    float speedMin = 1f;
     [SerializeField]
-    float speedmax = 5f;
+    float speedMax = 5f;
 
-    float spped;
+    float speed;
     Rigidbody rb;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class Mover : MonoBehaviour
     void SetRandowVelocity()
     {
         var th = Random.Range(0, 360);
-        var dir = new Vector3(Mathf.Cos(th * MathfDeg2Rad), Mathf.Sin(th * Mathf.Deg2Rad), 0);
+        var dir = new Vector3(Mathf.Cos(th * Mathf.Deg2Rad), Mathf.Sin(th * Mathf.Deg2Rad), 0);
         rb.velocity = dir * speed;
     }
 
@@ -32,6 +32,6 @@ public class Mover : MonoBehaviour
         {
             SetRandowVelocity();
         }
-        rb.velocity = rb.velocity.normalized * speedmin;
+        rb.velocity = rb.velocity.normalized * speed;
     }
 }
