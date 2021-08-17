@@ -8,14 +8,12 @@ public class TinyAudio : MonoBehaviour
     /// </summary>
     public enum SE
     {
-        Menu_Startup,
-        Menu_Select,
         Decision,
-        Cancel,
         CoinAttack,
         TomatoAttack,
         Clear,
-        Gameover
+        Gameover,
+        AppleAttack
     }
 
     [Tooltip("効果音のAudio Clipを、SEの列挙子と同じ順番で設定してください。"), SerializeField]
