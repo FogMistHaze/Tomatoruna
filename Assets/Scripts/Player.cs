@@ -28,5 +28,4 @@ public class Player : MonoBehaviour
         rb.velocity = v;
     }
 
-
 }
