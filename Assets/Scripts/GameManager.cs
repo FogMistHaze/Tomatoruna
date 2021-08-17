@@ -4,17 +4,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    TextMeshPro scoreText = default;
+    [SerializeField]
+    TextMeshPro timeText = default;
+
     static bool clear;
     static bool gameover;
+    static int score;
+    static float time;
+    const float StartTime = 10f;
 
     void Awak()
     {
-        ItemGet.ClearCount();
+        score = 0;
+        time = StartTime;
+
         clear = false;
-        gameover = false;    
+        gameover = false;
+        ItemGet.ClearCount();
+    }
+
+    void UpdateScareText()
+    {
+        scoreText.text = $"{score:00000}";
     }
 
     public static void ToClear()

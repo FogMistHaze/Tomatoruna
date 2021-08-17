@@ -24,4 +24,9 @@ public class ItemGet : MonoBehaviour
             GameManager.ToClear();
         }
     }
+
+    public ItemGet():base()
+    {
+        count++;
+    }
 }
