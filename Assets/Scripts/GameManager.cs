@@ -9,9 +9,9 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TextMeshPro scoreText = default;
+    TextMeshProUGOI scoreText = default;
     [SerializeField]
-    TextMeshPro timeText = default;
+    TextMeshProUGOI timeText = default;
 
     static bool clear;
     static bool gameover;
@@ -20,16 +20,19 @@ public class GameManager : MonoBehaviour
     const float StartTime = 10f;
     const int ScoreMax = 99999;
 
-    void Awak()
+    public static GameManager Instance { get; private set; }
+
+    void Awake()
     {
         Instance = this;
+        Item.ClearCount();
 
         score = 0;
         time = StartTime;
 
         clear = false;
         gameover = false;
-        ItemGet.ClearCount();
+        Item.ClearCount();
     }
 
     void UpdateScareText()
@@ -37,11 +40,17 @@ public class GameManager : MonoBehaviour
         scoreText.text = $"{score:00000}";
     }
 
+    void UpdateTimeText()
+    {
+        timeText.text = $"{time}";
+    }
+
     public static void ToClear()
     {
         if (clear || gameover) return;
 
         clear = true;
+
         SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
@@ -51,27 +60,25 @@ public class GameManager : MonoBehaviour
         if (clear || gameover) return;
 
         gameover = true;
+
         SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
-
-    public static GameManager Instance { get; private set; }
 
     public static void AddPoint(int point)
     {
         score += point;
 
         score = Mathf.Min(score, ScoreMax);
+
         Instance.UpdateScoreText();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         TinyAudio.PlaySE(TinyAudio.SE.Decision);
     }
 
-    // Update is called once per frame
     void Update()
     {
 #if DEBUG_KEY
@@ -90,7 +97,7 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        time -= time.fixedDeltaTime;
+        time -= Time.fixedDeltaTime;
         if(time<=0)
         {
             time = 0;

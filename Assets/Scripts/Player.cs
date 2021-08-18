@@ -16,25 +16,20 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Awake()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        cameraDistance = Vector3.Distance(Camera.main.transform.position, transform.position);
+        rb.velocity = Vector3.up;
+        rb.velocity = Vector3.up * 5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var mp = Input.mousePosition;
-        mp.z = cameraDistance;
-        var wp = Camera.main.ScreenToWorldPoint(mp);
-        var v = (wp - transform.position) / Time.fixedDeltaTime;
-        rb.velocity = v;
+        Vector3 move = rb.velocity;
+        move.x = Input.GetAxisRaw("Horizontal");
+        move.y = Input.GeaAxisRaw("Vertical");
+        rb.velocity = move.normalized * 5f;
     }
 
 }
