@@ -8,10 +8,12 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    /*
     [SerializeField]
     TextMeshProUGOI scoreText = default;
     [SerializeField]
     TextMeshProUGOI timeText = default;
+    */
 
     static bool clear;
     static bool gameover;
@@ -22,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+    /*
     void Awake()
     {
         Instance = this;
@@ -73,6 +76,7 @@ public class GameManager : MonoBehaviour
 
         Instance.UpdateScoreText();
     }
+    */
 
     void Start()
     {
@@ -95,6 +99,7 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
+    /*
     void FixedUpdate()
     {
         time -= Time.fixedDeltaTime;
@@ -105,4 +110,5 @@ public class GameManager : MonoBehaviour
         }
         UpdateTimeText;
     }
+    */
 }

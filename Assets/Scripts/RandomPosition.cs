@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class RandomPosition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    Bounds spawnBounds;
+
+    private void OnDrawGizmosSelected()
     {
-        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(spawnBounds.center, spawnBounds.size);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        var pos = transform.position;
+        pos.x = Random.Range(spawnBounds.min.x, spawnBounds.max.x);
+        pos.y = Random.Range(spawnBounds.min.y, spawnBounds.max.y);
+        transform.position = pos;
     }
 }

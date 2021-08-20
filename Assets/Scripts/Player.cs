@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    /*
     float cameraDistance = 0;
     Rigidbody rb = null;
 
@@ -31,5 +32,5 @@ public class Player : MonoBehaviour
         move.y = Input.GeaAxisRaw("Vertical");
         rb.velocity = move.normalized * 5f;
     }
-
+    */
 }
