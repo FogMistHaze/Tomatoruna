@@ -8,27 +8,30 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    /*
     [SerializeField]
-    TextMeshProUGOI scoreText = default;
+    TextMeshProUGUI scoreText = default;
     [SerializeField]
-    TextMeshProUGOI timeText = default;
-    */
+    TextMeshProUGUI timeText = default;
 
     static bool clear;
     static bool gameover;
+
     static int score;
     static float time;
     const float StartTime = 10f;
+
     const int ScoreMax = 99999;
 
-    public static GameManager Instance { get; private set; }
+    public static GameManager Instance
+    { 
+        get;
+        private set;
+    }
 
-    /*
     void Awake()
     {
+        
         Instance = this;
-        Item.ClearCount();
 
         score = 0;
         time = StartTime;
@@ -37,17 +40,17 @@ public class GameManager : MonoBehaviour
         gameover = false;
         Item.ClearCount();
     }
-
-    void UpdateScareText()
+    
+    void UpdateScoreText()
     {
         scoreText.text = $"{score:00000}";
     }
-
+    
     void UpdateTimeText()
     {
         timeText.text = $"{time}";
     }
-
+    
     public static void ToClear()
     {
         if (clear || gameover) return;
@@ -67,7 +70,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
-
+    
     public static void AddPoint(int point)
     {
         score += point;
@@ -76,7 +79,7 @@ public class GameManager : MonoBehaviour
 
         Instance.UpdateScoreText();
     }
-    */
+    
 
     void Start()
     {
@@ -99,16 +102,14 @@ public class GameManager : MonoBehaviour
 #endif
     }
 
-    /*
     void FixedUpdate()
     {
         time -= Time.fixedDeltaTime;
-        if(time<=0)
+        if (time <= 0)
         {
             time = 0;
             ToGameover();
         }
-        UpdateTimeText;
+        UpdateTimeText();
     }
-    */
 }

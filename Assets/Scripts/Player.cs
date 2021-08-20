@@ -8,15 +8,19 @@ public class Player : MonoBehaviour
     /*
     float cameraDistance = 0;
     Rigidbody rb = null;
+    */
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.collider.CompareTag("Enemy"))
         {
+            //SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
+            //Time.timeScale = 0;
             GameManager.ToGameover();
         }
     }
 
+    /*
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
