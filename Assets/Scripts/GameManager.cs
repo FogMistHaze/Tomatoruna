@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     
     void UpdateTimeText()
     {
-        timeText.text = $"{time}";
+        timeText.text = $"{time:00:00}";
     }
     
     public static void ToClear()
@@ -88,6 +88,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        /*
 #if DEBUG_KEY
         if(Input.GetKeyDown(KeyCode.O))
         {
@@ -100,6 +101,7 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Clear");
         }
 #endif
+        */
     }
 
     void FixedUpdate()

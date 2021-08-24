@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8007162717706339737}
   m_LocalRotation: {x: 0.00000008146034, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -79.9, y: 115, z: -15}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 30, y: 30, z: 30}
   m_Children: []
   m_Father: {fileID: 8007162717945202955}
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 8007162717945202957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8007162717706339736}
   m_Father: {fileID: 0}
@@ -127,9 +127,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 3
 --- !u!65 &8007162717306813999
 BoxCollider:
@@ -143,7 +143,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 26, y: 26, z: 26}
-  m_Center: {x: -80, y: 116, z: -15}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7167252141530197170
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnBounds:
-    m_Center: {x: 0, y: 120, z: -35}
-    m_Extent: {x: 200, y: 100, z: 30}
+    m_Center: {x: -600, y: 280, z: 0}
+    m_Extent: {x: 475, y: 266, z: 0}
 --- !u!114 &-5957643426462392858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1f519dcf0dec748adefbf7d52acfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMin: 1
-  speedMax: 5
+  speedMin: 300
+  speedMax: 300
 --- !u!114 &-2830391435365617407
 MonoBehaviour:
   m_ObjectHideFlags: 0
