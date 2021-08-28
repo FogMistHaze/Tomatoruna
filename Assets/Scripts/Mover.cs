@@ -21,7 +21,7 @@ public class Mover : MonoBehaviour
 
     void SetRandomVelocity()
     {
-        var th = Random.Range(0, 360);
+        var th = Random.Range(-600, 520);
         var dir = new Vector3(Mathf.Cos(th * Mathf.Deg2Rad), Mathf.Sin(th * Mathf.Deg2Rad), 0);
         rb.velocity = dir * speed;
     }

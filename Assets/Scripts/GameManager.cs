@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour
         if (time <= 0)
         {
             time = 0;
-            ToGameover();
+            ToClear();
         }
         UpdateTimeText();
     }

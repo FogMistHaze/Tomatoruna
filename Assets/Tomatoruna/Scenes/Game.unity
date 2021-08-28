@@ -879,8 +879,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004500149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -600, y: 540, z: -45}
-  m_LocalScale: {x: 960, y: 0, z: 100}
+  m_LocalPosition: {x: -600, y: 550, z: -97}
+  m_LocalScale: {x: 960, y: 0, z: 200}
   m_Children: []
   m_Father: {fileID: 353881217}
   m_RootOrder: 1
@@ -1283,8 +1283,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1811297261}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -600, y: 20, z: -45}
-  m_LocalScale: {x: 960, y: 0, z: 100}
+  m_LocalPosition: {x: -600, y: 20, z: -86}
+  m_LocalScale: {x: 960, y: 0, z: 200}
   m_Children: []
   m_Father: {fileID: 353881217}
   m_RootOrder: 0
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8363912973979492961, guid: 56b21c9ca032c284589a745500bb7e8c, type: 3}
-  spawnCount: 10
+  spawnCount: 20
 --- !u!114 &1907543038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,22 +1379,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
+    m_Center: {x: -600, y: 280, z: 0}
+    m_Extent: {x: 480, y: 270, z: 0}
   enemyPrefab: {fileID: 723168386267289181, guid: 750f8aa601e530e4db151d0ac4b690ee,
     type: 3}
   itemPrefab: {fileID: 8363912973979492961, guid: 56b21c9ca032c284589a745500bb7e8c,
     type: 3}
   ritemPrefab: {fileID: 8007162717945202957, guid: 617f01b4b11be8e42b50b2f986ac8e05,
     type: 3}
-  minTime: 2
-  maxTime: 5
-  xMinPosition: -10
-  xMaxPosition: 10
-  yMinPosition: 0
-  yMaxPosition: 10
-  zMinPosition: 10
-  zMaxPosition: 20
 --- !u!224 &1907543042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1552,7 +1544,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.5, y: 0, z: 1.5}
-  m_Center: {x: 0, y: 1.15, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &1725336693070644267
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1597,4 +1589,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  moveSpeed: 200
+  moveSpeed: 500
