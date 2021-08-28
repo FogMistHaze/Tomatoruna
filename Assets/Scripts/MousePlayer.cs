@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MousePlayer : MonoBehaviour
 {
+    [SerializeField]
+    private Vector3 velocity;
+    [SerializeField]
+    private float moveSpeed = 5.0f;
+
     float cameraDistance = 0;
     Rigidbody rb = null;
 
@@ -12,13 +17,30 @@ public class MousePlayer : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         cameraDistance = Vector3.Distance(Camera.main.transform.position, transform.position);
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        velocity = Vector3.zero;
+        //if (Input.GetKey(KeyCode.W))
+        //    velocity.y += 1;
+        if (Input.GetKey(KeyCode.A))
+            velocity.x -= 1;
+        //if (Input.GetKey(KeyCode.S))
+        //    velocity.y -= 1;
+        if (Input.GetKey(KeyCode.D))
+            velocity.x += 1;
+
+        velocity = velocity.normalized * moveSpeed * Time.deltaTime;
+
+        if (velocity.magnitude > 0)
+            transform.position += velocity;
+    }
+
+    /*
     void Update()
     {
         var mp = Input.mousePosition;
@@ -27,4 +49,5 @@ public class MousePlayer : MonoBehaviour
         var v = (wp - transform.position) / Time.fixedDeltaTime;
         rb.velocity = v;
     }
+    */
 }

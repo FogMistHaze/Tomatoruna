@@ -22,11 +22,7 @@ public class GameManager : MonoBehaviour
 
     const int ScoreMax = 99999;
 
-    public static GameManager Instance
-    { 
-        get;
-        private set;
-    }
+    public static GameManager Instance { get; private set; }
 
     void Awake()
     {

@@ -14,21 +14,18 @@ public class Item : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //GameManager.Instance.AddPoint(100);
+        
         if (collision.collider.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            
-            count--;
-            if (count <= 0)
-            {
-                SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
-                Time.timeScale = 0;
-            }
-
+            Destroy(gameObject); 
+            //クリアチェック
             count--;
             if (count <= 0)
             {
                 GameManager.ToClear();
+                //SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
+                //Time.timeScale = 0;
             }
         }
     }
@@ -38,11 +35,9 @@ public class Item : MonoBehaviour
         count++;
     }
 
-    /*
     private void Start()
     {
         count++;
         Debug.Log(count);
     }
-    */
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    GameObject prefab;
+    GameObject prefab=null;
     [SerializeField]
     int spawnCount = 10;
 
