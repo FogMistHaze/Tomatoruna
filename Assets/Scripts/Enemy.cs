@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destroy : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag=="Item")
+        if(collision.gameObject.tag=="kabe")
         {
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject);
         }
     }
 }

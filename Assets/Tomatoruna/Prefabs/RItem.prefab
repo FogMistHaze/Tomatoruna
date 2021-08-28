@@ -90,9 +90,8 @@ GameObject:
   - component: {fileID: 8007162717945202955}
   - component: {fileID: 8007162717945202952}
   - component: {fileID: 8007162717306813999}
-  - component: {fileID: 7167252141530197170}
   - component: {fileID: -5957643426462392858}
-  - component: {fileID: -2830391435365617407}
+  - component: {fileID: -2874742480878343710}
   m_Layer: 11
   m_Name: RItem
   m_TagString: RItem
@@ -138,27 +137,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8007162717945202957}
-  m_Material: {fileID: 13400000, guid: fbba6597a0996014e9f1fed149d7a7f3, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 26, y: 26, z: 26}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7167252141530197170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8007162717945202957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f717e78a29283049b208ae48eab706e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnBounds:
-    m_Center: {x: -600, y: 280, z: 0}
-    m_Extent: {x: 475, y: 266, z: 0}
 --- !u!114 &-5957643426462392858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedMin: 300
   speedMax: 300
---- !u!114 &-2830391435365617407
+--- !u!114 &-2874742480878343710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,6 +166,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8007162717945202957}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c99fe49cfc4d9f4691e07a1678bf743, type: 3}
+  m_Script: {fileID: 11500000, guid: c23f18826c081ed45beb6ea60dc4f42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

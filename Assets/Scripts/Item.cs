@@ -14,7 +14,6 @@ public class Item : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //GameManager.Instance.AddPoint(100);
         
         if (collision.collider.CompareTag("Player"))
         {
@@ -24,9 +23,12 @@ public class Item : MonoBehaviour
             if (count <= 0)
             {
                 GameManager.ToClear();
-                //SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
-                //Time.timeScale = 0;
             }
+        }
+
+        if (collision.gameObject.tag == "kabe")
+        {
+            Destroy(gameObject);
         }
     }
 

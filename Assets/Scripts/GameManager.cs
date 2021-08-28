@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     static int score;
     static float time;
-    const float StartTime = 10f;
+    const float StartTime = 30f;
 
     const int ScoreMax = 99999;
 
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
     
     void UpdateTimeText()
     {
-        timeText.text = $"{time:00:00}";
+        timeText.text = $"{time:00}";
     }
     
     public static void ToClear()
@@ -76,28 +76,9 @@ public class GameManager : MonoBehaviour
         Instance.UpdateScoreText();
     }
     
-
     void Start()
     {
         TinyAudio.PlaySE(TinyAudio.SE.Decision);
-    }
-
-    void Update()
-    {
-        /*
-#if DEBUG_KEY
-        if(Input.GetKeyDown(KeyCode.O))
-        {
-            TinyAudio.BGM bgm = TinyAudio.BGM.Gameover;
-            SceneManager.LoadScene("Gameover");
-        }
-        else if(Input.GetKeyDown(KeyCode.C))
-        {
-            TinyAudio.BGM bgm = TinyAudio.BGM.Clear;
-            SceneManager.LoadScene("Clear");
-        }
-#endif
-        */
     }
 
     void FixedUpdate()

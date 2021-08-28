@@ -16,31 +16,59 @@ public class RandomPosition : MonoBehaviour
         Gizmos.DrawWireCube(spawnBounds.center, spawnBounds.size);
     }
 
-    void Awake()
+    public GameObject enemyPrefab;
+    public GameObject itemPrefab;
+    public GameObject ritemPrefab;
+
+    public float minTime = 1f;
+    public float maxTime = 5f;
+    public float xMinPosition = -10f;
+    public float xMaxPosition = 10f;
+    public float yMinPosition = 0f;
+    public float yMaxPosition = 10f;
+    public float zMinPosition = 10f;
+    public float zMaxPosition = 20f;
+
+    private float interval;
+
+    private float time = 0f;
+
+    void Start()
     {
-        var pos = transform.position;
-        pos.x = Random.Range(spawnBounds.min.x, spawnBounds.max.x);
-        pos.y = Random.Range(spawnBounds.min.y, spawnBounds.max.y);
-        transform.position = pos;
-        /*
-        for (var i = 0; i < 100; i++)
-        {
-            var xn = xpos / xDist;
-            var yn = ypos / yDist;
-
-            if ((xn < SpawnRangeX)
-                || (xn > 1f - SpawnRangeX)
-                || (yn < SpawnRangeY)
-                || (yn > (1f - SpawnRangeY)))
-            {
-                break;
-            }
-
-            xpos = Random.Range(-minRange.x, xDist - maxRange.x);
-            ypos = Random.Range(-minRange.y, yDist - maxRange.y);
-        }
-        */
+        interval = GetRandomTime();
     }
 
-    
+    void Update()
+    {
+        time += Time.deltaTime;
+
+        if (time > interval)
+        {
+            GameObject enemy = Instantiate(enemyPrefab);
+            enemy.transform.position = GetRandomPosition();
+
+            GameObject itme = Instantiate(itemPrefab);
+            itme.transform.position = GetRandomPosition();
+
+            GameObject ritem = Instantiate(ritemPrefab);
+            ritem.transform.position = GetRandomPosition();
+
+            time = 0f;
+            interval = GetRandomTime();
+        }
+    }
+
+    private float GetRandomTime()
+    {
+        return Random.Range(minTime, maxTime);
+    }
+
+    private Vector3 GetRandomPosition()
+    {
+        float x = Random.Range(xMinPosition, xMaxPosition);
+        float y = Random.Range(yMinPosition, yMaxPosition);
+        float z = Random.Range(zMinPosition, zMaxPosition);
+
+        return new Vector3(x, y, z);
+    }
 }
