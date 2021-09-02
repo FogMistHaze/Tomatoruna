@@ -23,38 +23,4 @@ public class RandomPosition : MonoBehaviour
         pos.y = Random.Range(spawnBounds.min.y, spawnBounds.max.y);
         transform.position = pos;
     }
-
-    /*
-    public GameObject enemyPrefab;
-    public GameObject itemPrefab;
-    public GameObject ritemPrefab;
-    
-
-    float time = 1f;
-    float delta = 0;
-
-    void Start()
-    {
-        //interval = GetRandomTime();
-    }
-
-    void Update()
-    {
-        this.delta += Time.deltaTime;
-
-        if (this.delta > this.time)
-        {
-            this.delta = 0;
-            GameObject enemy = Instantiate(enemyPrefab) as GameObject;
-            GameObject item = Instantiate(itemPrefab) as GameObject;
-            GameObject ritem = Instantiate(ritemPrefab) as GameObject;
-            int px = Random.Range(-1000, -200);
-            int py = Random.Range(520, 520);
-            int pz = Random.Range(-110, -110);
-            enemy.transform.position = new Vector3(px, py, pz);
-            item.transform.position = new Vector3(px, py, pz);
-            ritem.transform.position = new Vector3(px, py, pz);
-        }
-    }
-    */
 }
