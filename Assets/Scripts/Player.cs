@@ -9,7 +9,9 @@ public class Player : MonoBehaviour
     {
         if(collision.collider.CompareTag("Enemy"))
         {
-            GameManager.ToGameover();
+            SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
+            Time.timeScale = 0;
+            //GameManager.ToGameover();
         }
     }
 

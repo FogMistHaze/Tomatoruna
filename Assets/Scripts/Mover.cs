@@ -6,6 +6,7 @@ public class Mover : MonoBehaviour
 {
     [SerializeField]
     float speedMin = 1f;
+
     [SerializeField]
     float speedMax = 5f;
 
@@ -15,13 +16,15 @@ public class Mover : MonoBehaviour
     void Awake()
     {
         speed = Random.Range(speedMin, speedMax);
+        
         rb = GetComponent<Rigidbody>();
+        
         SetRandomVelocity();
     }
 
     void SetRandomVelocity()
     {
-        var th = Random.Range(-600, 520);
+        var th = Random.Range(0, 360);
         var dir = new Vector3(Mathf.Cos(th * Mathf.Deg2Rad), Mathf.Sin(th * Mathf.Deg2Rad), 0);
         rb.velocity = dir * speed;
     }

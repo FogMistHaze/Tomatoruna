@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI scoreText = default;
+
     [SerializeField]
     TextMeshProUGUI timeText = default;
 

@@ -5,33 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class Item : MonoBehaviour
 {
-    static int count = 0;
+    //static int count = 0;
 
+    /*
     public static void ClearCount()
     {
         count = 0;
     }
+    */
 
     private void OnCollisionEnter(Collision collision)
     {
         
         if (collision.collider.CompareTag("Player"))
         {
+            //GameManager.Instance.AddPoint(100);
             Destroy(gameObject); 
-            //クリアチェック
-            count--;
-            if (count <= 0)
-            {
-                GameManager.ToClear();
-            }
         }
 
-        if (collision.gameObject.tag == "kabe")
+        if (collision.collider.CompareTag("kabe"))
         {
             Destroy(gameObject);
         }
     }
 
+    /*
     public Item():base()
     {
         count++;
@@ -42,4 +40,5 @@ public class Item : MonoBehaviour
         count++;
         Debug.Log(count);
     }
+    */
 }
