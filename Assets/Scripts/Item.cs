@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Item : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        
+
         if (collision.collider.CompareTag("Player"))
         {
-            //GameManager.Instance.AddPoint(100);
+            GameManager.AddPoint(100);
             TinyAudio.PlaySE(TinyAudio.SE.CoinAttack);
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
 
         if (collision.collider.CompareTag("kabe"))

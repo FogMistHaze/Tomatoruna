@@ -14,11 +14,16 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI timeText = default;
 
+    [SerializeField]
+    TextMeshProUGUI highScoreText = default;
+
     static bool clear;
     static bool gameover;
 
     static int score;
     static float time;
+    static int highScore;
+
     const float StartTime = 30f;
 
     const int ScoreMax = 99999;
@@ -39,14 +44,22 @@ public class GameManager : MonoBehaviour
     
     void UpdateScoreText()
     {
-        scoreText.text = $"{score:00000}";
+        if (scoreText != null) 
+            scoreText.text = $"{score:00000}";
     }
     
     void UpdateTimeText()
     {
-        timeText.text = $"{time:00}";
+        if (timeText != null) 
+            timeText.text = $"{time:00}";
     }
     
+    void UpdateHighScoreText()
+    {
+        if (highScoreText != null) 
+            highScoreText.text = $"はいすこあ:{highScore:00000}";
+    }
+
     public static void ToClear()
     {
         if (clear || gameover) return;
@@ -55,6 +68,8 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene("Clear", LoadSceneMode.Additive);
         Time.timeScale = 0;
+
+        CheckHighScore();
     }
 
     public static void ToGameover()
@@ -65,6 +80,8 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
         Time.timeScale = 0;
+
+        CheckHighScore();
     }
     
     public static void AddPoint(int point)
@@ -75,10 +92,19 @@ public class GameManager : MonoBehaviour
 
         Instance.UpdateScoreText();
     }
+
+    public static void CheckHighScore()
+    {
+        if(score>highScore)
+        {
+            highScore = score;
+        }
+    }
     
     void Start()
     {
         TinyAudio.PlaySE(TinyAudio.SE.Decision);
+        UpdateHighScoreText();
     }
 
     void FixedUpdate()

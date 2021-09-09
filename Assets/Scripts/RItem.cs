@@ -8,6 +8,7 @@ public class RItem : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            GameManager.AddPoint(500);
             TinyAudio.PlaySE(TinyAudio.SE.AppleAttack);
             Destroy(gameObject);
         }
