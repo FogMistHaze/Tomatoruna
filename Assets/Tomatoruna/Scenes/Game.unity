@@ -413,7 +413,7 @@ PrefabInstance:
     - target: {fileID: 8923450334596819724, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8923450334596819726, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
@@ -1299,9 +1299,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1907543042}
   - component: {fileID: 1907543038}
-  - component: {fileID: 1907543037}
-  - component: {fileID: 1907543040}
-  - component: {fileID: 1907543039}
   - component: {fileID: 1907543044}
   - component: {fileID: 1907543043}
   - component: {fileID: 1907543041}
@@ -1312,20 +1309,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1907543037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907543036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bf888775cb0c84c930c5aceb4464ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5309983077863935630, guid: 750f8aa601e530e4db151d0ac4b690ee, type: 3}
-  spawnCount: 5
 --- !u!114 &1907543038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1340,34 +1323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 778694598}
   timeText: {fileID: 226866777}
---- !u!114 &1907543039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907543036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bf888775cb0c84c930c5aceb4464ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5874069124334333029, guid: 617f01b4b11be8e42b50b2f986ac8e05, type: 3}
-  spawnCount: 3
---- !u!114 &1907543040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907543036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2bf888775cb0c84c930c5aceb4464ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5103845848743664802, guid: 56b21c9ca032c284589a745500bb7e8c, type: 3}
-  spawnCount: 15
+  highScoreText: {fileID: 0}
 --- !u!114 &1907543041
 MonoBehaviour:
   m_ObjectHideFlags: 0
