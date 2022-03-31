@@ -7,9 +7,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    TextMeshProUGUI timeText = default;
-
-    [SerializeField]
     TextMeshProUGUI scoreText = default;
 
     [SerializeField]
@@ -23,26 +20,16 @@ public class GameManager : MonoBehaviour
     static bool clear;
     static bool gameover;
 
-    static float time;
-    const float StartTime = 30f;
-
     public static GameManager Instance { get; private set; }
 
     void Awake()
     {
         Instance = this;
 
-        time = StartTime;
         score = 0;
 
         clear = false;
         gameover = false;
-    }
-
-    void UpdateTimeText()
-    {
-        if (timeText != null)
-            timeText.text = $"{time:00}";
     }
 
     void UpdateScoreText()
@@ -100,17 +87,5 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         TinyAudio.PlaySE(TinyAudio.SE.Decision);
-        UpdateHighScoreText();
-    }
-
-    void FixedUpdate()
-    {
-        time -= Time.fixedDeltaTime;
-        if (time <= 0)
-        {
-            time = 0;
-            ToClear();
-        }
-        UpdateTimeText();
     }
 }

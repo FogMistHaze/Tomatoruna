@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 1004981928}
   - component: {fileID: 1004981927}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1013,6 +1013,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117271341}
+  - component: {fileID: 1117271343}
+  - component: {fileID: 1117271342}
+  - component: {fileID: 1117271344}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1034,6 +1037,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117271342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117271340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ab0f5ef811785e44bf376956c7ab8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Prefabs:
+  - {fileID: 5309983077863935630, guid: 750f8aa601e530e4db151d0ac4b690ee, type: 3}
+  - {fileID: 5874069124334333029, guid: 617f01b4b11be8e42b50b2f986ac8e05, type: 3}
+  - {fileID: 5103845848743664802, guid: 56b21c9ca032c284589a745500bb7e8c, type: 3}
+  rangeA: {fileID: 1242284926}
+  rangeB: {fileID: 743325511}
+--- !u!114 &1117271343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117271340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6ba32220b61fa4e8ea3d2e37d7e1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 778694598}
+  highScoreText: {fileID: 0}
+--- !u!114 &1117271344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117271340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4ed71b765c1a214fb1176a0b5c4389a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeText: {fileID: 226866777}
 --- !u!1 &1242284925
 GameObject:
   m_ObjectHideFlags: 0
