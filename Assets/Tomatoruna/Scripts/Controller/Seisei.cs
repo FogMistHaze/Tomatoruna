@@ -5,6 +5,7 @@ using UnityEngine;
 public class Seisei : MonoBehaviour
 {
     public GameObject[] Prefabs;
+    StartCount startCount;
 
     public Transform rangeA;
     public Transform rangeB;
@@ -15,22 +16,26 @@ public class Seisei : MonoBehaviour
     void Start()
     {
         time = 1.0f;
+        startCount = GetComponent<StartCount>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        time -= Time.deltaTime;
-
-        if (time <= 0.0f)
+        if (startCount.Go == true)
         {
-            time = 1.0f;
-            number = Random.Range(0, Prefabs.Length);
+            time -= Time.deltaTime;
 
-            float x = Random.Range(rangeA.position.x, rangeB.position.x);
-            float y = Random.Range(rangeA.position.y, rangeB.position.y);
-            float z = Random.Range(rangeA.position.z, rangeB.position.z);
+            if (time <= 0.0f)
+            {
+                time = 1.0f;
+                number = Random.Range(0, Prefabs.Length);
 
-            Instantiate(Prefabs[number], new Vector3(x, y, z), Quaternion.identity);
-        }
+                float x = Random.Range(rangeA.position.x, rangeB.position.x);
+                float y = Random.Range(rangeA.position.y, rangeB.position.y);
+                float z = Random.Range(rangeA.position.z, rangeB.position.z);
+
+                Instantiate(Prefabs[number], new Vector3(x, y, z), Quaternion.identity);
+            }
+        }     
     }
 }

@@ -1,35 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public float sp = 3f;
     private Rigidbody rb;
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.CompareTag("Enemy"))
-        {
-            SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
-            Time.timeScale = 0;
-        }
-    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity= new Vector3(-5, rb.velocity.y, rb.velocity.z);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = new Vector3(5, rb.velocity.y, rb.velocity.z);
-        }
+        float x = Input.GetAxisRaw("Horizontal");
+
+        Vector3 Idou = new Vector3(x, 0, 0);
+        rb.velocity = Idou * sp;
+
+        //移動制限
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -8f, 8f),Mathf.Clamp(transform.position.y, 0f, 0f),Mathf.Clamp(transform.position.z, 0f, 0f));
     }
 }

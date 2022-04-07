@@ -8,12 +8,19 @@ public class Timer : MonoBehaviour
     [SerializeField]
     TextMeshProUGUI timeText = default;
 
+    StartCount startCount;
+
     static float time;
     const float StartTime = 30f;
 
     void Awake()
     {
         time = StartTime;
+    }
+
+    void Start()
+    {
+        startCount = GetComponent<StartCount>();
     }
 
     void UpdateTimeText()
@@ -24,12 +31,15 @@ public class Timer : MonoBehaviour
 
     void FixedUpdate()
     {
-        time -= Time.fixedDeltaTime;
-        if (time <= 0)
+        if (startCount.Go == true)
         {
-            time = 0;
-            GameManager.ToClear();
+            time -= Time.fixedDeltaTime;
+            if (time <= 0)
+            {
+                time = 0;
+                GameManager.ToClear();
+            }
+            UpdateTimeText();
         }
-        UpdateTimeText();
     }
 }

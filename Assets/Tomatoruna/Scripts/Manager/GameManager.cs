@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     public static void ToClear()
     {
-        if (clear || gameover) return;
+        if (clear) return;
 
         clear = true;
 
@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
         CheckHighScore();
     }
-
+    
     public static void ToGameover()
     {
         if (clear || gameover) return;
@@ -86,6 +86,7 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
+        Time.timeScale = 1;
         TinyAudio.PlaySE(TinyAudio.SE.Decision);
     }
 }
