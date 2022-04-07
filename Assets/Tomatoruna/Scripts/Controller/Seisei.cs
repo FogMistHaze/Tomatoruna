@@ -27,7 +27,7 @@ public class Seisei : MonoBehaviour
 
             if (time <= 0.0f)
             {
-                time = 1.0f;
+                time = 0.5f;
                 number = Random.Range(0, Prefabs.Length);
 
                 float x = Random.Range(rangeA.position.x, rangeB.position.x);

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8923450334596819715}
-  - component: {fileID: 8923450334596819724}
+  - component: {fileID: 2398474582478304095}
   - component: {fileID: 8923450334596819725}
   m_Layer: 0
   m_Name: TinyAudio
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &8923450334596819724
+--- !u!82 &2398474582478304095
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,11 +42,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a6d72075392f89044862721125993906, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4dc0b3273d12af4499fbfe6b052402c8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -146,5 +146,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b9052194ede7d0e45b343f67408a92ed, type: 3}
   - {fileID: 8300000, guid: 65bc442f351e86f439a15f7197f801d8, type: 3}
   bgmList:
-  - {fileID: 8300000, guid: 899bdc5b2074d8e42af5dd48a1bae965, type: 3}
   - {fileID: 8300000, guid: 4dc0b3273d12af4499fbfe6b052402c8, type: 3}
+  - {fileID: 8300000, guid: 899bdc5b2074d8e42af5dd48a1bae965, type: 3}

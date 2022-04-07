@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+            TinyAudio.StopBGM();
             GameManager.ToGameover();
         }
     }

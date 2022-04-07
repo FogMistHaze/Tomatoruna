@@ -1,6 +1,15 @@
 ﻿using UnityEngine;
+
 public class TinyAudio : MonoBehaviour
 {
+    [SerializeField]
+    AudioClip[] seList = null;
+
+    [SerializeField]
+    AudioClip[] bgmList = null;
+
+    AudioSource audioSource;
+
     public static TinyAudio Instance;
 
     public enum SE
@@ -11,9 +20,11 @@ public class TinyAudio : MonoBehaviour
         AppleAttack,
     }
 
-    [SerializeField]
-    AudioClip[] seList = null;
-    AudioSource audioSource;
+    public enum BGM
+    {
+        Gameover,
+        Clear
+    }
 
     private void Awake()
     {
@@ -25,4 +36,17 @@ public class TinyAudio : MonoBehaviour
     {
         Instance.audioSource.PlayOneShot(Instance.seList[(int)se]);
     }
+
+    public static void StopBGM()
+    {
+        Instance.audioSource.Stop();
+    }
+
+    public static void PlayBGM(BGM bgm)
+    {
+        StopBGM();
+        Instance.audioSource.clip = Instance.bgmList[(int)bgm];
+        Instance.audioSource.Play();
+    }
+
 }

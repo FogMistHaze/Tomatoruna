@@ -262,6 +262,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2398474582478304095, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 98c9d33f939b9a54c97c7017ee45f622, type: 3}
     - target: {fileID: 8923450334596819715, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -317,11 +322,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8923450334596819724, guid: 577372faa5412e74da937ca5a8bc7f13,
+    - target: {fileID: 8923450334596819725, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
-      propertyPath: m_Volume
-      value: 1
+      propertyPath: bgmList.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8923450334596819725, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: bgmList.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4dc0b3273d12af4499fbfe6b052402c8, type: 3}
+    - target: {fileID: 8923450334596819725, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: bgmList.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 899bdc5b2074d8e42af5dd48a1bae965, type: 3}
     - target: {fileID: 8923450334596819726, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
       propertyPath: m_Name
@@ -1374,7 +1389,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1242284925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: 15, z: 0}
+  m_LocalPosition: {x: -9, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1593,7 +1608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39c170755187ca2479225fbcd0d09896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sp: 10
+  sp: 20
 --- !u!65 &1725336693070644266
 BoxCollider:
   m_ObjectHideFlags: 0

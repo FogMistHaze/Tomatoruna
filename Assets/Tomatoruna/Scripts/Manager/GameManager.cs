@@ -32,6 +32,11 @@ public class GameManager : MonoBehaviour
         gameover = false;
     }
 
+    void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     void UpdateScoreText()
     {
         if (scoreText != null)
@@ -73,20 +78,14 @@ public class GameManager : MonoBehaviour
 
         CheckHighScore();
     }
-    
+
     public static void ToGameover()
     {
         if (clear || gameover) return;
 
         gameover = true;
-
+        //StopBGM();
         SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
         Time.timeScale = 0;
-    }
-    
-    void Start()
-    {
-        Time.timeScale = 1;
-        TinyAudio.PlaySE(TinyAudio.SE.Decision);
     }
 }

@@ -1130,6 +1130,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2398474582478304095, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 439b354f77b763c4f937d7284e001361, type: 3}
+    - target: {fileID: 2398474582478304095, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8923450334596819715, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1185,6 +1195,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8923450334596819724, guid: 577372faa5412e74da937ca5a8bc7f13,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 439b354f77b763c4f937d7284e001361, type: 3}
     - target: {fileID: 8923450334596819726, guid: 577372faa5412e74da937ca5a8bc7f13,
         type: 3}
       propertyPath: m_Name
