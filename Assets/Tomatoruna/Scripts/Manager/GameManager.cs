@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using NCMB;
 
 public class GameManager : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1;
+        UpdateHighScoreText();
+        Time.timeScale = 1;       
     }
 
     void UpdateScoreText()
@@ -46,7 +48,7 @@ public class GameManager : MonoBehaviour
     void UpdateHighScoreText()
     {
         if (highScoreText != null)
-            highScoreText.text = $"はいすこあ:{highScore:00000}";
+            highScoreText.text = $"はいすこあ:{highScore}";
     }
 
     public static void AddPoint(int point)
@@ -77,6 +79,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
 
         CheckHighScore();
+        naichilab.RankingLoader.Instance.SendScoreAndShowRanking(highScore);
     }
 
     public static void ToGameover()
@@ -84,7 +87,6 @@ public class GameManager : MonoBehaviour
         if (clear || gameover) return;
 
         gameover = true;
-        //StopBGM();
         SceneManager.LoadScene("Gameover", LoadSceneMode.Additive);
         Time.timeScale = 0;
     }
