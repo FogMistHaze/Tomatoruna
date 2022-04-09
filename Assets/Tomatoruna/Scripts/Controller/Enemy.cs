@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class Enemy : MonoBehaviour
 {
     public float sp = 5;
+    public GameObject effect = null;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Player"))
         {
+            Instantiate(effect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
             TinyAudio.StopBGM();
             GameManager.ToGameover();
         }

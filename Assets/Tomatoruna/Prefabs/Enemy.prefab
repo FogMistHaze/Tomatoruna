@@ -220,7 +220,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.9
+  m_Radius: 0.95
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5309983077863935618
 MonoBehaviour:
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sp: 5
+  effect: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
 --- !u!1 &5309983078367523278
 GameObject:
   m_ObjectHideFlags: 0
