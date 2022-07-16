@@ -19,3 +19,5 @@ public class CallChangeScene : MonoBehaviour
         }
     }
 }
+
+//SPACEキーでもシーン遷移出来る

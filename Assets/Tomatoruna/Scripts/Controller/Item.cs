@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class Item : MonoBehaviour
 {
@@ -30,3 +29,11 @@ public class Item : MonoBehaviour
     }
     
 }
+
+/*
+【コインとリンゴのスクリプト】
+プレイヤー(お椀)に触れたら...
+スコアに変数poに入力した値を加算する、SEを鳴らす、ゲームオブジェクトを消す
+
+一定の範囲内から出たらゲームオブジェクトを消す
+ */

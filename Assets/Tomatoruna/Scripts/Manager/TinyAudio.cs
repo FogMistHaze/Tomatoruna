@@ -50,3 +50,12 @@ public class TinyAudio : MonoBehaviour
     }
 
 }
+
+/*
+【音源の管理】
+SEの部分のみ授業で習い、自分でBGMの部分を追加した
+これはまだ理解の途中。SEが鳴らなかったり、BGMが止まらなかったりするのが課題
+
+PlaySEとPlayBGMで、セットした特定の番号の音が鳴る
+StopBGMでBGMが止まる
+*/

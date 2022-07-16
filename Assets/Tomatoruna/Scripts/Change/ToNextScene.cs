@@ -24,3 +24,9 @@ public class ToNextScene : MonoBehaviour
         sceneChanged = false;
     }
 }
+
+/*
+【シーン遷移のプログラム】
+nextSceneに入れた名前のSceneに遷移する
+sceneChangedはアニメーションを待っている間は遷移しないようにする為に実装
+*/

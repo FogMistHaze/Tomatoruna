@@ -13,3 +13,5 @@ public class AnimCall : MonoBehaviour
         callEvents.Invoke();
     }
 }
+
+//アニメーションが旗マークのところに来た時に実行する

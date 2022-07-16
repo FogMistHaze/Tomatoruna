@@ -39,3 +39,8 @@ public class Seisei : MonoBehaviour
         }     
     }
 }
+
+/*
+【ゲームオブジェクトの自動生成スクリプト】
+ゲーム開始カウント(Go)を待ってから5秒ごとにrangeA～rangeBの間でランダムの位置に生成
+*/

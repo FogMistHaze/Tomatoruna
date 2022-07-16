@@ -36,3 +36,6 @@ public class StartCount : MonoBehaviour
 
     }
 }
+
+//ゲーム開始のカウント
+//表示：３、２、１、スタート、テキストが消える

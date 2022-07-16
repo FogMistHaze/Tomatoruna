@@ -10,3 +10,6 @@ public class TitleManager : MonoBehaviour
         Time.timeScale = 1;
     }
 }
+
+//クリアしたりゲームオーバーになってから戻ると時間が止まってるので追加
+//これがあるならGameManagerの方にはいらなかった気がする
